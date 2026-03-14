@@ -379,6 +379,17 @@ section:nth-of-type(even) { background: var(--bg-alt); }
   padding: 1rem 0;
 }
 
+/* ── Visitor map ── */
+#visitor-map {
+  padding: 1.5rem 2rem;
+  background: var(--bg-alt);
+}
+
+.visitor-map-inner {
+  display: flex;
+  justify-content: center;
+}
+
 /* ── Footer ── */
 footer {
   background: #111827;

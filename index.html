@@ -7,7 +7,7 @@ layout: default
   <div class="nav-inner">
     <a href="#about" class="nav-brand">Jialin Zhang</a>
     <button class="msg-btn" onclick="document.getElementById('contact-modal').classList.add('open')">
-      Leave me a message
+      Contact
     </button>
   </div>
 </nav>
@@ -118,11 +118,18 @@ layout: default
   </div>
 </section>
 
+<!-- Visitor Map -->
+<section id="visitor-map">
+  <div class="inner visitor-map-inner">
+    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=6X_N1d4qGqPIHcM71myR_bWz2OaXLqyG9ZRlzp7A4fw&w=200"></script>
+  </div>
+</section>
+
 <!-- Contact Modal -->
 <div id="contact-modal" class="modal-overlay" onclick="if(event.target===this)this.classList.remove('open')">
   <div class="modal-box">
     <button class="modal-close" onclick="document.getElementById('contact-modal').classList.remove('open')" aria-label="Close">&times;</button>
-    <h2 class="modal-title">Leave me a message</h2>
+    <h2 class="modal-title">Contact</h2>
     <p class="modal-sub">I'll get back to you via email.</p>
     <form action="https://formspree.io/f/mdawdgnp" method="POST" class="contact-form" id="contact-form">
       <label>
