@@ -2,120 +2,132 @@
 layout: default
 ---
 
-<!-- Navigation -->
-<nav>
-  <div class="nav-inner">
-    <a href="#about" class="nav-brand">Jialin Zhang</a>
-    <button class="msg-btn" onclick="document.getElementById('contact-modal').classList.add('open')">
-      Contact
-    </button>
-  </div>
-</nav>
+<main class="page">
 
-<!-- Hero / About -->
-<section class="hero" id="about">
-  <div class="hero-grid">
-    <div class="hero-text">
+  <!-- Intro -->
+  <header class="intro" id="about">
+    <div>
       <h1 class="name">Jialin Zhang</h1>
-      <p class="hero-subtitle">CS &amp; Applied Math @ UC Berkeley</p>
-      <p class="hero-bio">
-        I'm a junior at UC Berkeley studying Computer Science and Applied Mathematics.
-        My current research interest is in LLM evaluation, agentic AI, and continual learning.
-        I'm passionate about building real-world systems that are intelligent, reliable, and impactful.
-      </p>
-      <div class="social-links">
-        <a href="{{ site.linkedin_url }}" class="social-btn" target="_blank" rel="noopener">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://github.com/{{ site.github_username }}" class="social-btn" target="_blank" rel="noopener">
-          <i class="fab fa-github"></i> GitHub
-        </a>
+      <p class="affil">Computer Science and Applied Mathematics, UC Berkeley</p>
+
+      <div class="bio">
+        <p>
+          I am a senior at UC Berkeley studying Computer Science and Applied Mathematics.
+          I work with Prof. <a href="https://people.eecs.berkeley.edu/~matei/" target="_blank" rel="noopener">Matei Zaharia</a>
+          and Prof. <a href="https://dawnsong.io/" target="_blank" rel="noopener">Dawn Song</a>.
+        </p>
+        <p>
+          I'm broadly interested in self-improving LLM agents. I study how to build realistic evaluations for
+          complex AI systems, how agents can evaluate and improve themselves, and how such systems scale efficiently.
+        </p>
       </div>
+
+      <p class="links">
+        <button class="link-btn" onclick="document.getElementById('contact-modal').classList.add('open')">Contact</button>
+        <span class="sep">/</span>
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>
+        <span class="sep">/</span>
+        <a href="https://x.com/benzhang04" target="_blank" rel="noopener">X (formerly Twitter)</a>
+        <span class="sep">/</span>
+        <a href="{{ site.linkedin_url }}" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
     </div>
-    <div class="hero-photo">
+    <div class="photo">
       <img src="{{ '/photo.jpeg' | relative_url }}" alt="Jialin Zhang">
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- Publications -->
-<section id="publications">
-  <div class="inner">
-    <h2 class="section-title">Publications</h2>
-    <div class="pub-card">
-      <div class="pub-title">CyberGym: Evaluating AI Agents' Real-World Cybersecurity Capabilities at Scale</div>
-      <div class="pub-authors">
-        Zhun Wang, Tianneng Shi, Jingxuan He, Matthew Cai, <strong>Jialin Zhang</strong>, Dawn Song
-      </div>
-      <div class="pub-venue">
-        The Fourteenth International Conference on Learning Representations (ICLR 2026)
-      </div>
-      <div class="badges">
-        <span class="badge badge-gold">ICLR 2026 Oral</span>
-        <span class="badge badge-blue">Adopted in Anthropic's Claude System Card</span>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- Publications -->
+  <section id="publications">
+    <h2>Publications</h2>
+    <p class="note">* denotes equal contribution.</p>
+    <ol class="pubs">
 
-<!-- Experience -->
-<section id="experience">
-  <div class="inner">
-    <h2 class="section-title">Experience</h2>
-    <div class="exp-list">
+      <li>
+        <div class="pub-title">CyberGym: Evaluating AI Agents' Real-World Cybersecurity Capabilities at Scale</div>
+        <div class="pub-authors">Zhun Wang, Tianneng Shi, Jingxuan He, Matthew Cai, <strong>Jialin Zhang</strong>, Dawn Song</div>
+        <div class="pub-venue"><em>International Conference on Learning Representations (ICLR)</em>, 2026</div>
+        <div class="pub-tags"><span class="tag">Oral</span><span class="tag tag-blue">Adopted by Anthropic Claude System Cards</span></div>
+        <div class="pub-links"><a href="https://openreview.net/forum?id=2YvbLQEdYt" target="_blank" rel="noopener">paper</a></div>
+      </li>
 
-      <div class="exp-item">
-        <div class="exp-date">Jun 2025 – Present</div>
-        <div class="exp-body">
-          <div class="exp-org">Teaching AI at Berkeley</div>
-          <div class="exp-role">Agentic AI Researcher &amp; Backend Engineer</div>
-        </div>
-      </div>
+      <li>
+        <div class="pub-title">Parallel Environments for Agents</div>
+        <div class="pub-authors">Shangyin Tan*, <strong>Jialin Zhang</strong>*, Matei Zaharia</div>
+        <div class="pub-venue"><em>ACM Conference on AI and Agentic Systems (CAIS)</em>, Demo Track, 2026</div>
+        <div class="pub-links"><a href="https://www.caisconf.org/program/2026/demos/parallel-environments-for-agents/" target="_blank" rel="noopener">paper</a></div>
+      </li>
 
-      <div class="exp-item">
-        <div class="exp-date">Sep 2024 – Present</div>
-        <div class="exp-body">
-          <div class="exp-org">Berkeley Sky Computing Lab</div>
-          <div class="exp-role">Undergraduate Researcher</div>
-        </div>
-      </div>
+      <li>
+        <div class="pub-title">Batching the Reflective Optimization Loop: Parallel Proposals Make GEPA Faster and Better</div>
+        <div class="pub-authors"><strong>Jialin Zhang</strong>, Lakshya A Agrawal, Shangyin Tan, Donghyun Lee, Lutfi Eren Erdogan, Dan Klein, Koushik Sen, Alex Dimakis, Matei Zaharia</div>
+        <div class="pub-venue"><em>NeurIPS Workshop on Resource-Aware Agentic AI (RAAAI)</em>, 2026</div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2610.36774" target="_blank" rel="noopener">paper</a><a href="https://gepa-ai.github.io/gepa/blog/2026/07/30/parallel-proposals/" target="_blank" rel="noopener">blog</a><a href="https://github.com/gepa-ai/gepa" target="_blank" rel="noopener">code</a></div>
+      </li>
 
-    </div>
-  </div>
-</section>
+      <li>
+        <div class="pub-title">Terrarium: A Systematic Evaluation of LLM-Driven Optimization Systems</div>
+        <div class="pub-authors">Shangyin Tan, Donghyun Lee, <strong>Jialin Zhang</strong>, Lakshya A Agrawal, Dennis Jacob, David Wagner, Koushik Sen, Dan Klein, Alex Dimakis, Matei Zaharia</div>
+        <div class="pub-venue"><em>NeurIPS Workshop on Evaluation of Interactive Agents (IAEval)</em>, 2026</div>
+        <div class="pub-links"><a href="https://openreview.net/forum?id=zIZdfXxYcd" target="_blank" rel="noopener">paper</a><a href="https://github.com/gepa-ai/terrarium" target="_blank" rel="noopener">code</a></div>
+      </li>
 
-<!-- Interests -->
-<section id="interests">
-  <div class="inner">
-    <h2 class="section-title">Interests</h2>
-    <div class="interests-grid">
-      <div class="interest-card">
-        <div class="interest-icon">🧠</div>
-        <div class="interest-label">AI Agents &amp; Autonomy</div>
-      </div>
-      <div class="interest-card">
-        <div class="interest-icon">🔐</div>
-        <div class="interest-label">Cybersecurity</div>
-      </div>
-      <div class="interest-card">
-        <div class="interest-icon">🌐</div>
-        <div class="interest-label">Distributed Systems</div>
-      </div>
-      <div class="interest-card">
-        <div class="interest-icon">☁️</div>
-        <div class="interest-label">Cloud Infrastructure</div>
-      </div>
-      <div class="interest-card">
-        <div class="interest-icon">🦾</div>
-        <div class="interest-label">Robotics</div>
-      </div>
-      <div class="interest-card">
-        <div class="interest-icon">⚙️</div>
-        <div class="interest-label">MLOps</div>
-      </div>
-    </div>
-  </div>
-</section>
+      <li>
+        <div class="pub-title">Scaling Discovery Requires Forgetting</div>
+        <div class="pub-authors">Shangyin Tan, Ben Zhou, Lakshya A Agrawal, <strong>Jialin Zhang</strong>, Yilin Chen, Qiuyang Mang, Donghyun Lee, Dennis Jacob, Koushik Sen, Alex Dimakis, Matei Zaharia</div>
+        <div class="pub-venue"><em>arXiv</em>, 2026</div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2610.20563" target="_blank" rel="noopener">paper</a></div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- Talks -->
+  <section id="talks">
+    <h2>Talks</h2>
+    <ul class="rows">
+      <li>
+        <span class="what"><strong>Parallel Proposals in GEPA.</strong> Lightning talk, <a href="https://luma.com/61qrnbs7" target="_blank" rel="noopener">Bay Area DSPy Meetup</a>.</span>
+        <span class="when">Aug 2026</span>
+      </li>
+      <li>
+        <span class="what"><strong>Parallel Environments for Agents.</strong> Demo and poster, ACM CAIS 2026.</span>
+        <span class="when">May 2026</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Honors -->
+  <section id="honors">
+    <h2>Honors</h2>
+    <ul class="rows">
+      <li>
+        <span class="what">Selected participant, Cornell, Maryland, Max Planck Pre-doctoral Research School (CMMRS)</span>
+        <span class="when">2026</span>
+      </li>
+      <li>
+        <span class="what">EECS Honors Program, UC Berkeley</span>
+        <span class="when"></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Teaching -->
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <ul class="rows">
+      <li>
+        <span class="what">Reader, EECS 106A Introduction to Robotics, UC Berkeley</span>
+        <span class="when">Fall 2025 &ndash; Fall 2026</span>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2026 Jialin Zhang
+  </footer>
+
+</main>
 
 <!-- Contact Modal -->
 <div id="contact-modal" class="modal-overlay" onclick="if(event.target===this)this.classList.remove('open')">
@@ -153,12 +165,3 @@ layout: default
     }
   });
 </script>
-
-<!-- Footer -->
-<footer>
-  <p>© 2026 Jialin Zhang &nbsp;·&nbsp;
-    <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>
-    &nbsp;·&nbsp;
-    <a href="{{ site.linkedin_url }}" target="_blank" rel="noopener">LinkedIn</a>
-  </p>
-</footer>

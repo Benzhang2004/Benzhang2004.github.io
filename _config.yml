@@ -15,8 +15,9 @@
 # Site settings
 
 title: Jialin Zhang
+tagline: UC Berkeley
 description: >-
-  Berkeley CS + Applied Math student interested in AI agents, real-world systems, and impactful technical projects.
+  Jialin Zhang, UC Berkeley. Research on self-improving LLM agents, agent evaluation, and systems for agentic optimization.
 baseurl: ""
 url: "https://benzhang2004.github.io"
 
@@ -28,3 +29,5 @@ linkedin_url: "https://www.linkedin.com/in/jialin-zhang-185b782ab/"
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
